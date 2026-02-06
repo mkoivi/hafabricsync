@@ -1,0 +1,58 @@
+{
+    "name": "MQTT to Azure Event Hubs (OAuth)",
+    "version": "0.2.0",
+    "slug": "mqtt_to_eventhub_oauth",
+    "description": "Forward MQTT messages to Azure Event Hubs using Entra ID OAuth (no SAS).",
+    "arch": ["aarch64", "armv7", "armhf", "amd64"],
+    "startup": "services",
+    "boot": "auto",
+    "init": false,
+    "host_network": false,
+    "hassio_api": false,
+    "homeassistant_api": false,
+    "ingress": false,
+    "panel_icon": "mdi:transfer",
+    "options": {
+      "mqtt_host": "core-mosquitto",
+      "mqtt_port": 1883,
+      "mqtt_username": "",
+      "mqtt_password": "",
+      "mqtt_topic": "home/#",
+      "mqtt_qos": 0,
+  
+      "eventhub_fqdn": "YOURNAMESPACE.servicebus.windows.net",
+      "eventhub_name": "ha-stream",
+  
+      "tenant_id": "",
+      "client_id": "",
+      "client_secret": "",
+  
+      "client_id_mqtt": "ha-mqtt-to-eventhub",
+      "log_level": "INFO",
+      "max_batch_size": 200,
+      "max_batch_wait_ms": 1000,
+      "queue_maxsize": 20000
+    },
+    "schema": {
+      "mqtt_host": "str",
+      "mqtt_port": "int(1,65535)",
+      "mqtt_username": "str?",
+      "mqtt_password": "password?",
+      "mqtt_topic": "str",
+      "mqtt_qos": "int(0,2)",
+  
+      "eventhub_fqdn": "str",
+      "eventhub_name": "str",
+  
+      "tenant_id": "str",
+      "client_id": "str",
+      "client_secret": "password",
+  
+      "client_id_mqtt": "str",
+      "log_level": "list(DEBUG|INFO|WARNING|ERROR)",
+      "max_batch_size": "int(1,5000)",
+      "max_batch_wait_ms": "int(10,60000)",
+      "queue_maxsize": "int(100,200000)"
+    }
+  }
+  
