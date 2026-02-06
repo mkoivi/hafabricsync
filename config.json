@@ -15,17 +15,17 @@
     "options": {
       "mqtt_host": "core-mosquitto",
       "mqtt_port": 1883,
-      "mqtt_username": "",
-      "mqtt_password": "",
+      "mqtt_username": "mqtt_user",
+      "mqtt_password": "1234",
       "mqtt_topic": "home/#",
       "mqtt_qos": 0,
   
-      "eventhub_fqdn": "YOURNAMESPACE.servicebus.windows.net",
-      "eventhub_name": "ha-stream",
+      "eventhub_fqdn": "mkoivihomeauto.servicebus.windows.net",
+      "eventhub_name": "hahub",
   
-      "tenant_id": "",
-      "client_id": "",
-      "client_secret": "",
+      "tenant_id": "de4ddeba-0e91-4f8d-b380-4f6f8c200a6f",
+      "client_id": "fc2161db-f010-41be-9b53-30b7da6c979e",
+      "client_secret": "wNN8Q~IntT39oBzogIyvqYQTe7Zm.3tDsF0ejajw",
   
       "client_id_mqtt": "ha-mqtt-to-eventhub",
       "log_level": "INFO",
