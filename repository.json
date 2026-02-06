@@ -1,0 +1,5 @@
+{
+  "name": "MQTT to Azure Event Hubs (OAuth)",
+  "url": "https://github.com/mkoivi/hafabricsync",
+  "maintainer": "Marko <marko.kooo@gmail.com>"
+}
