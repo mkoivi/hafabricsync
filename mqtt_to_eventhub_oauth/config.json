@@ -2,14 +2,12 @@
     "name": "MQTT to Azure Event Hubs (OAuth)",
     "version": "0.2.0",
     "slug": "mqtt_to_eventhub_oauth",
+    "image": "ghcr.io/mkoivi/hafabricsync/{arch}",
     "description": "Forward MQTT messages to Azure Event Hubs using Entra ID OAuth (no SAS).",
     "arch": ["aarch64", "armv7", "armhf", "amd64"],
     "startup": "services",
     "boot": "auto",
     "init": false,
-    "host_network": false,
-    "hassio_api": false,
-    "homeassistant_api": false,
     "ingress": false,
     "panel_icon": "mdi:transfer",
     "options": {
@@ -23,8 +21,8 @@
       "eventhub_fqdn": "mkoivihomeauto.servicebus.windows.net",
       "eventhub_name": "hahub",
   
-      "tenant_id": "de4ddeba-0e91-4f8d-b380-4f6f8c200a6f",
-      "client_id": "fc2161db-f010-41be-9b53-30b7da6c979e",
+      "tenant_id": "",
+      "client_id": "",
       "client_secret": "",
   
       "client_id_mqtt": "ha-mqtt-to-eventhub",
