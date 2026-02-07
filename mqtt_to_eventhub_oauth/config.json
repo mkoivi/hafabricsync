@@ -1,6 +1,6 @@
 {
     "name": "MQTT to Azure Event Hubs (OAuth)",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "slug": "mqtt_to_eventhub_oauth",
     "image": "ghcr.io/mkoivi/hafabricsync-{arch}",
     "description": "Forward MQTT messages to Azure Event Hubs using Entra ID OAuth (no SAS).",
@@ -10,6 +10,10 @@
     "init": false,
     "ingress": false,
     "panel_icon": "mdi:transfer",
+    "services": [],
+    "host_network": false,
+    "hassio_api": false,
+    "homeassistant_api": false,
     "options": {
       "mqtt_host": "core-mosquitto",
       "mqtt_port": 1883,
