@@ -3,6 +3,7 @@ import time
 import queue
 import threading
 import logging
+import datetime
 from typing import Dict, Any
 
 import paho.mqtt.client as mqtt
@@ -68,8 +69,8 @@ class Forwarder:
                 evt = EventData(payload)
                 evt.properties = {
                     "mqtt_topic": topic,
-                    "mqtt_qos": qos,
-                    "ingest_ts": int(time.time() * 1000)
+                    "mqtt_qos": int(qos),  # pidä pienenä
+                    "ingest_ts": datetime.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
                 }
 
                 try:
