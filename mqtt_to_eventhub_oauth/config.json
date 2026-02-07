@@ -2,7 +2,7 @@
     "name": "MQTT to Azure Event Hubs (OAuth)",
     "version": "0.2.0",
     "slug": "mqtt_to_eventhub_oauth",
-    "image": "ghcr.io/mkoivi/hafabricsync/{arch}",
+    "image": "ghcr.io/mkoivi/hafabricsync-{arch}",
     "description": "Forward MQTT messages to Azure Event Hubs using Entra ID OAuth (no SAS).",
     "arch": ["aarch64", "armv7", "armhf", "amd64"],
     "startup": "services",
